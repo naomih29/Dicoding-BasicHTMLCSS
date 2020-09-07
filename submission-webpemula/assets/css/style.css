@@ -1,0 +1,354 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    background-color: #000000;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav .logo{
+    color: #f5f5f5;
+    letter-spacing: 4px;
+}
+
+.logo h4 span, nav ul li a:hover, #about h2 span, #how-order h2 span{
+    background-color: #f5f5f5;
+    color: #000000;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 0px 5px;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -5px;
+    top: -5px;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg);
+}
+
+/* Parallax */
+.pimg{
+    position:relative;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-image:url('../img/gunpla.jpg');
+    min-height:200px;
+    z-index: 0;
+}
+
+.container{
+    z-index: 0;
+}
+
+/* Aside dan Content */
+#content{
+    float: left;
+    width: 75%;
+}
+
+aside{
+    border-radius: 5px;
+    margin-top: 10px;
+    float: right;
+    width: 25%;
+}
+
+aside #owner{
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+aside img{
+    width: 200px;
+    padding-top: 20px;
+    border-radius: 90px;
+}
+
+/* Form Box */
+.form-box{
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.form-box h3{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-slot{
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+
+.form-slot input{
+    border: none;
+    outline: none;
+}
+
+.form-slot input label{
+    display: block;
+}
+
+/* About */
+#about{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: justify;
+    padding: 15px 40px;
+}
+
+#about h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Card */
+#product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 10px;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.product-img{
+    position:relative;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    min-height:300px;
+    z-index: 0;
+    width: 100%;
+}
+
+.product-content h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.img-1{
+    background: url(../img/product-1.png);
+}
+
+.img-2{
+    background: url('../img/product-2.png');
+}
+
+.img-3{
+    background: url('../img/product-3.png');
+}
+
+.img-4{
+    background: url('../img/product-4.png') no-repeat;
+}
+
+.img-5{
+    background: url('../img/product-5.png') no-repeat;
+}
+
+.product-content{
+    margin: 20px;
+}
+
+.product-content h2{
+    text-align: center;
+}
+
+.product-contect p{
+    text-align: justify;
+}
+
+/* How to Order */
+#how-order{
+    display: block;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#how-order h2{
+    text-align: center;
+    color: #040a0a;
+}
+
+.column{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px 10px 30px;
+    background-color: #040c2b;
+    padding-bottom: 10px;
+} 
+
+.step-num{
+    font-size: 50px;
+    text-align: center;
+    min-width: 90px;
+}
+
+.step-exp{
+    color: #f5f5f5;
+    padding-top: 10px;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+main{
+    overflow: auto;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50%;
+    }
+
+    #content{
+        width: 100%;
+    }
+
+    aside{
+        float: none;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .column{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+        z-index: 1;
+    }
+    
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: #000000;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.1s;
+    }
+
+
+    nav ul.slide{
+        transform: translateX(0);
+        z-index: 1;
+    }
+
+    #content{
+        width: 100%;
+    }
+
+    aside{
+        float: none;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .column{
+        max-width: 70vh;
+    }
+}
